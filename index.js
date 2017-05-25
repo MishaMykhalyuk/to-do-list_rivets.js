@@ -34,4 +34,12 @@ const appModel = {
     }
 }
 
+rivets.binders['strike'] = (element, value) => {
+    if(value){
+        element.style.textDecoration = 'line-through'
+    } else {
+        element.style.textDecoration = 'none'
+    }
+}
+
 rivets.bind(rootElement, appModel)

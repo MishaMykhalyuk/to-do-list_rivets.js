@@ -4,11 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To do list</title>
-    <style>
-        .done{
-            text-decoration: line-through;
-        }
-    </style>
 </head>
 <body>
     <div id="app">
@@ -21,7 +16,7 @@
 
         <ul>
             <li rv-each-task="tasks">
-                <p rv-text="task.name" rv-class-done="task.isDone"></p>
+                <p rv-strike="task.isDone"><b>{task.name}</b></p>
                 <input type="checkbox" rv-checked="task.isDone">
                 <button rv-on-click="removeTask">Remove task</button>
             </li>
