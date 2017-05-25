@@ -42,4 +42,26 @@ rivets.binders['strike'] = (element, value) => {
     }
 }
 
+rivets.components['super-image'] = {
+    static: ['src'],
+    template() {
+        return `
+            <div rv-on-click="rotate">
+                <img rv-src="src" style="height: 300px; width: 400px; transition: 2s" />
+            </div>
+        `
+    },
+    initialize(element, data) {
+        let rotate = 0
+        element.style.transition = '2s'
+
+        return Object.assign({
+            src: './images/img1.jpeg',
+            rotate(event){
+                event.target.style.transform = `rotateY(${ rotate += 180}deg)`
+            }
+        }, data)
+    }
+}
+
 rivets.bind(rootElement, appModel)
