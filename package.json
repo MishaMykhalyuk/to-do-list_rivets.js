@@ -1,0 +1,19 @@
+{
+  "name": "to-do-list_rivets.js",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MishaMykhalyuk/to-do-list_rivets.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MishaMykhalyuk/to-do-list_rivets.js/issues"
+  },
+  "homepage": "https://github.com/MishaMykhalyuk/to-do-list_rivets.js#readme"
+}

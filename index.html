@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To do list</title>
+    <style>
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <h2>To do app</h2>
+
+        <input type="text" rv-value="taskName">
+        <button rv-on-click="addTask">Add task</button>
+        <button rv-on-click="removeAllDone">Remove all done</button>
+
+        <ul>
+            <li rv-each-task="tasks">
+                <p rv-text="task.name" rv-class-done="task.isDone"></p>
+                <input type="checkbox" rv-checked="task.isDone">
+                <button rv-on-click="removeTask">Remove task</button>
+            </li>
+        </ul>
+
+    </div>
+    
+    <script src="./node_modules/rivets/dist/rivets.bundled.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
